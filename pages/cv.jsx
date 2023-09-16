@@ -16,7 +16,7 @@ function experience() {
           duration: 0.5,
           delay: 0.1,
         }}
-        className="container relative gap-6 mx-auto flex flex-col lg:flex-row "
+        className="container relative gap-2 mx-auto flex flex-col lg:flex-row "
       >
         <ExperienceDetails />
         <ContactForm />

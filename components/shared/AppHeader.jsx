@@ -57,7 +57,7 @@ function AppHeader() {
             <div>
               <Link href="/">
                 <div className="flex justify-center items-center gap-2 font-medium text-xs">
-                  <div className="grid p-6 bg-primary-dark shadow-sm rounded-lg h-7 w-7 place-content-center">
+                  <div className="grid p-6 bg-indigo-800 shadow-sm rounded-lg h-7 w-7 place-content-center">
                     <div className="flex justify-center text-primary-light">
                       Benja
                     </div>

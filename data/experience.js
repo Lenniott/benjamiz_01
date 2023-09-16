@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 export const experienceData = [
   {
     id: uuidv4(),
-    title: "Product Designer, Mayden",
+    title: "Product Designer @ Mayden",
     date: "May 2023 - Present",
     location: "Bath",
     tasks: [
@@ -27,7 +27,7 @@ export const experienceData = [
   },
   {
     id: uuidv4(),
-    title: "Product Designer, Insendi",
+    title: "Product Designer @ Insendi",
     date: "Jan 2022 - May 2023",
     location: "Remote",
     tasks: [
@@ -45,6 +45,25 @@ export const experienceData = [
       },
     ],
   },
-
+  {
+    id: uuidv4(),
+    title: "Lead media specialist @ Insendi",
+    date: "August 2018 - Jan 2022",
+    location: "Remote",
+    tasks: [
+      {
+        id: uuidv4(),
+        task: "Scaled video production.",
+      },
+      {
+        id: uuidv4(),
+        task: "Built bespoke efficiency tools.",
+      },
+      {
+        id: uuidv4(),
+        task: "Mentored freelancers.",
+      },
+    ],
+  },
   // Add more experience objects here
 ];
