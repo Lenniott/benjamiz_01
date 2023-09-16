@@ -24,23 +24,24 @@ function AppHeader() {
     };
   }, []);
 
-  function navMenu(array) {
-        return (
-          <>
-          <div className=" ">
+  const NavMenuItem = (props) => {
+    return (
+      <>
+        <div className=" ">
           <Link
             onClick={toggleMenu}
-            href="/projects"
-            aria-label="Projects"
+            href={props.link}
+            aria-label={props.menuItem}
             className="block text-left text-lg text-primary-dark hover:text-secondary-dark sm:py-2 p-2 hover:bg-indigo-200 rounded-lg duration-500"
           >
-            Projects
+            {props.menuItem}
           </Link>
         </div>
         <hr className="border-gray-100 " />
-        </>
-        )
-  }
+      </>
+    );
+  };
+
   return (
     <motion.nav
       initial={{ opacity: 0 }}
@@ -90,28 +91,11 @@ function AppHeader() {
                   : "hidden"
               }
             >
-              <div className=" ">
-                <Link
-                  onClick={toggleMenu}
-                  href="/projects"
-                  aria-label="Projects"
-                  className="block text-left text-lg text-primary-dark hover:text-secondary-dark sm:py-2 p-2 hover:bg-indigo-200 rounded-lg duration-500"
-                >
-                  Projects
-                </Link>
-              </div>
+              <NavMenuItem menuItem="Project" link="/projects" />
               <hr className="border-gray-100 " />
-              <div className="block text-left text-lg text-primary-dark hover:text-secondary-dark sm:py-2 p-2 hover:bg-indigo-200 rounded-lg  duration-500">
-                <Link onClick={toggleMenu} href="/about" aria-label="About Me">
-                  About Me
-                </Link>
-              </div>
+              <NavMenuItem menuItem="Me" link="/about" />
               <hr className="border-gray-100 " />
-              <div className="block text-left text-lg text-primary-dark hover:text-secondary-dark sm:py-2 p-2 hover:bg-indigo-200 rounded-lg duration-500">
-                <Link onClick={toggleMenu} href="/contact" aria-label="Contact">
-                  Contact
-                </Link>
-              </div>
+              <NavMenuItem menuItem="Experience" link="/cv" />
             </div>
           </div>
 
