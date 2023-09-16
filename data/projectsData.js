@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import assets from "../public/images/project 1";
 
 export const projectsData = [
   {
@@ -6,7 +7,7 @@ export const projectsData = [
     title: "The Paradox of Knowledge Handoffs",
     url: "the-paradox-of-knowledge-handoffs",
     category: "Working principles",
-    img: "/images/project 1/group.jpg",
+    img: assets.thumbnail,
     ProjectHeader: {
       title: "The Paradox of Knowledge Handoffs",
       publishDate: "Jul 2023",

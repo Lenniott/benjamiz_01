@@ -67,7 +67,7 @@ function AppBanner() {
       >
         <img
           layout="responsive"
-          src={activeTheme === "dark" ? "/images/hero.png" : "/images/hero.png"}
+          src="/images/hero.png"
           alt="product designer"
         />
       </motion.div>
