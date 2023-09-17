@@ -16,7 +16,7 @@ export const aboutMeData = [
           href="https://open.spotify.com/track/3N0QZQLosy8SQR6kVrp5Bn?si=d27ac100d9c74ccf"
           target="_blank"
           rel="noopener noreferrer"
-		  className="hover:underline text-indigo-"
+          className="text-red-500 hover:underline "
         >
           singer-songwriter
         </a>{" "}
