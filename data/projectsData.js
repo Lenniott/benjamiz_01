@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import assets from "../public/images/project 1";
+import projectOneImages from "../public/images/project 1";
 
 export const projectsData = [
   {
@@ -7,7 +7,7 @@ export const projectsData = [
     title: "The Paradox of Knowledge Handoffs",
     url: "the-paradox-of-knowledge-handoffs",
     category: "Working principles",
-    img: assets.thumbnail,
+    img: projectOneImages.thumbnail,
     ProjectHeader: {
       title: "The Paradox of Knowledge Handoffs",
       publishDate: "Jul 2023",
@@ -29,7 +29,7 @@ export const projectsData = [
           id: uuidv4(),
           styleID: "allDetails",
           title: "A Team in Flux",
-          img: "/images/project 1/project_1_insendi2022.jpeg",
+          img: projectOneImages.team,
           alt: "product team Gran Canaria 2022",
           body: "I stepped into my role as product designer during a period of significant upheaval. A newly-appointed CTO had just arrived, accompanied by a fresh team of product managers and a technical director. Amidst this flux, the air was rife with speculation about the future of Insendi's product, vision, and strategy. Conversations were swirling around the idea of dividing Insendi into three distinct applications, each tailored to a specific Job To Be Done (JTBD).",
         },
