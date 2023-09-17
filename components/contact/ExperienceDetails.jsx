@@ -2,6 +2,7 @@ import { experienceData } from "../../data/experience";
 import { FiBriefcase, FiMenu } from "react-icons/fi";
 
 const ExperienceTimeline = () => {
+  const skills = []
   return (
     <ol className="relative border-l border-gray-300 flex flex-col ">
       {experienceData.map((exp) => (

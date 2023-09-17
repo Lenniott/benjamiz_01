@@ -39,12 +39,12 @@ function ProjectSingle(props) {
         );
       case "textOnly":
         return (
-          <div key={details.id} className="mb-8 mt-4">
-            <div className="bg-indigo-100 p-4 rounded-lg">
+          <div key={details.id} className="mb-4 mt-0">
+            <div className="p-4 rounded-lg">
               <h2 className="w-full flex justify-start text-2xl font-semibold">
                 {details.title}
               </h2>
-              <p className="font-general-italic text-ternary-dark text-center font-semibold  text-lg ">
+              <p className="text-ternary-dark text-left font-light  text-lg ">
                 {details.body}
               </p>
             </div>
@@ -91,7 +91,7 @@ function ProjectSingle(props) {
               <h2 className="w-full flex justify-start text-2xl font-semibold">
                 {details.title}
               </h2>
-              <p className="font-general-italic text-ternary-dark text-center font-semibold  text-lg ">
+              <p className="italic text-ternary-dark text-left font-light  text-lg ">
                 {details.body}
               </p>
             </div>
@@ -104,7 +104,7 @@ function ProjectSingle(props) {
               <h2 className="w-full flex justify-start text-xl font-semibold text-gray-700 pb-2">
                 {details.title}
               </h2>
-              <p className="font-general-italic text-ternary-dark text-left font-semibold  text-lg ">
+              <p className="italic text-ternary-dark text-left font-light  text-lg ">
                 "{details.body}"
               </p>
             </div>
