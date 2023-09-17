@@ -73,7 +73,7 @@ export const projectsData = [
     title: "Phoenix Digital Agency",
     url: "phoenix-digital-agency",
     category: "Mobile Application",
-    img: "/images/mobile-project-2.jpg",
+    img: "",
     ProjectHeader: {
       title: "Phoenix Digital Agency",
       publishDate: "Jul 26, 2021",
@@ -83,17 +83,17 @@ export const projectsData = [
       {
         id: uuidv4(),
         title: "Phoenix Digital Agency",
-        img: "/images/ui-project-1.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "Phoenix Digital Agency",
-        img: "/images/web-project-2.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "Phoenix Digital Agency",
-        img: "/images/mobile-project-2.jpg",
+        img: "",
       },
     ],
     ProjectInfo: {
@@ -166,7 +166,7 @@ export const projectsData = [
     title: "Project Management UI",
     url: "project-management-ui",
     category: "UI/UX Design",
-    img: "/images/ui-project-1.jpg",
+    img: "",
     ProjectHeader: {
       title: "Project Management UI",
       publishDate: "Jul 26, 2021",
@@ -176,17 +176,17 @@ export const projectsData = [
       {
         id: uuidv4(),
         title: "Kabul Project Management UI",
-        img: "/images/ui-project-1.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "Kabul Project Management UI",
-        img: "/images/web-project-2.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "Kabul Project Management UI",
-        img: "/images/mobile-project-2.jpg",
+        img: "",
       },
     ],
     ProjectInfo: {
@@ -292,7 +292,7 @@ export const projectsData = [
     title: "Cloud Storage Platform",
     url: "cloud-storage-platform",
     category: "UI/UX Design",
-    img: "/images/ui-project-2.jpg",
+    img: "",
     ProjectHeader: {
       title: "Cloud Storage Platform",
       publishDate: "Jul 26, 2021",
@@ -302,17 +302,17 @@ export const projectsData = [
       {
         id: uuidv4(),
         title: "Kabul Cloud Storage Platform",
-        img: "/images/ui-project-1.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "Kabul Cloud Storage Platform",
-        img: "/images/web-project-2.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "Kabul Cloud Storage Platform",
-        img: "/images/mobile-project-2.jpg",
+        img: "",
       },
     ],
     ProjectInfo: {
@@ -418,7 +418,7 @@ export const projectsData = [
     title: "WeTalk Social Application",
     url: "wetalk-social-app",
     category: "Mobile Application",
-    img: "/images/mobile-project-1.jpg",
+    img: "",
     ProjectHeader: {
       title: "WeTalk Social Application",
       publishDate: "Jul 26, 2021",
@@ -428,17 +428,17 @@ export const projectsData = [
       {
         id: uuidv4(),
         title: "WeTalk Social Application",
-        img: "/images/ui-project-1.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "WeTalk Social Application",
-        img: "/images/web-project-2.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "WeTalk Social Application",
-        img: "/images/mobile-project-2.jpg",
+        img: "",
       },
     ],
     ProjectInfo: {
@@ -511,7 +511,7 @@ export const projectsData = [
     title: "Apple New Design System",
     url: "apple-new-design-system",
     category: "Web Application",
-    img: "/images/web-project-1.jpg",
+    img: "",
     ProjectHeader: {
       title: "Apple New Design System",
       publishDate: "Jul 26, 2021",
@@ -521,17 +521,17 @@ export const projectsData = [
       {
         id: uuidv4(),
         title: "Kabul Apple New Design System",
-        img: "/images/ui-project-1.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "Kabul Apple New Design System",
-        img: "/images/web-project-2.jpg",
+        img: "",
       },
       {
         id: uuidv4(),
         title: "Kabul Apple New Design System",
-        img: "/images/mobile-project-2.jpg",
+        img: "",
       },
     ],
     ProjectInfo: {
