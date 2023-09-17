@@ -19,7 +19,7 @@ function experience() {
         className="container relative gap-2 mx-auto flex flex-col lg:flex-row "
       >
         <ExperienceDetails />
-        <ContactForm />
+        {/* <ContactForm /> */}
       </motion.div>
     </div>
   );

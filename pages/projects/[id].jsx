@@ -1,34 +1,12 @@
 import Image from "next/image";
-import { useState } from "react";
-
-import { FiClock, FiTag } from "react-icons/fi";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
-import RelatedProjects from "../../components/projects/RelatedProjects";
-import ImageModal from "../../components/HireMeModal";
+
 function ProjectSingle(props) {
   const chip = {
     header: "",
   };
 
-  //   const [showModal, setShowModal] = useState(false);
-  //   const [selectedImage, setSelectedImage] = useState(null);
-
-  //   function showImageModal(image) {
-  //     if (!showModal) {
-  //       document
-  //         .getElementsByTagName("html")[0]
-  //         .classList.add("overflow-y-hidden");
-  //       setShowModal(true);
-  //       setSelectedImage(image);
-  //     } else {
-  //       document
-  //         .getElementsByTagName("html")[0]
-  //         .classList.remove("overflow-y-hidden");
-  //       setShowModal(false);
-  //       setSelectedImage(null);
-  //     }
-  //   }
   const renderLayout = (details, index) => {
     switch (details.styleID) {
       case "ImageOnly":
@@ -143,7 +121,7 @@ function ProjectSingle(props) {
           })}
         </div>
       </div>
-      <RelatedProjects />
+      {/* <RelatedProjects /> */}
       {/* <div>
         {showModal ? (
           <ImageModal
