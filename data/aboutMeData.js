@@ -4,7 +4,7 @@ export const aboutMeData = [
   {
     id: uuidv4(),
     title: "👤 About me",
-    image: "/images/About me.jpeg",
+    image: aboutMeImages.point,
     bio: (
       <>
         I'm Benjamin, a problem solver who loves a challenge. I excel at
@@ -16,7 +16,7 @@ export const aboutMeData = [
           href="https://open.spotify.com/track/3N0QZQLosy8SQR6kVrp5Bn?si=d27ac100d9c74ccf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-red-500 hover:underline "
+          className="underline hover:font-bold"
         >
           singer-songwriter
         </a>{" "}
