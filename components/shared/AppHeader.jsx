@@ -109,10 +109,10 @@ function AppHeader() {
                   : "hidden"
               }
             >
-              {navList.map((item) => (
+              {navList.map((item, index) => (
                 <>
-                  <NavMenuItem label={item[1]} link={item[1]} />
-                  <hr className="border-gray-100 " />
+                  <NavMenuItem id={index} label={item[1]} link={item[1]} />
+                  <hr id={`hr-${index}`} className="border-gray-100 " />
                 </>
               ))}
             </div>
@@ -120,8 +120,8 @@ function AppHeader() {
 
           {/* Header links large screen */}
           <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-            {navList.map((item) => (
-              <NavList label={item[1]} link={item[0]} />
+            {navList.map((item, index) => (
+              <NavList id={index} label={item[1]} link={item[0]} />
             ))}
           </div>
         </div>

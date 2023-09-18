@@ -53,7 +53,7 @@ function AppBanner() {
             aria-label="Download Resume"
           >
             <FiBriefcase className="ml-0 sm:ml-1 mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiBriefcase>
-            <span className="text-sm sm:text-lg duration-100">Download CV</span>
+            <span className="text-sm sm:text-lg duration-100">View CV</span>
           </a>
         </motion.div>
       </div>
@@ -63,20 +63,12 @@ function AppBanner() {
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
         className="relative w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0 "
       >
-        <div className=" group hover:translate-y-0.5 hover:scale-105 grayscale hover:grayscale-0  duration-500">
+        <div className=" hover:translate-y-0.5 hover:scale-105 grayscale hover:grayscale-0  duration-500">
           <Image
             layout="responsive"
             src={homePageImage.hero}
-            alt="product designer"
+            alt="Product designer"
           />
-          <button
-            download="Benjamin Mizrany_CV - Detailed_web.pdf"
-            href="public/files/Benjamin Mizrany_CV - Detailed_web.pdf"
-            className="absolute top-[310px] left-[170px] font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 group-hover:shadow-lg rounded-lg bg-transparent text-transparent group-hover:translate-y-0.5 group-hover:scale-105 grayscale group-hover:grayscale-0 group-hover:bg-primary-dark group-hover:text-primary-light duration-500"
-            aria-label="Download Resume"
-          >
-            About me
-          </button>
         </div>
       </motion.div>
     </motion.section>

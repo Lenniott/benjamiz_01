@@ -1,22 +1,26 @@
 import Button from "../reusable/Button";
 import FormInput from "../reusable/FormInput";
 import { FiSend, FiMenu } from "react-icons/fi";
+import { useState } from "react";
 
 function ContactForm() {
+  const [showForm, setShowForm] = useState(false);
   return (
     <div className="w-full lg:w-1/2">
-      <hr className="m-8" />
-      <div>
-        <button
-          download="Benjamin Mizrany_CV - Detailed_web.pdf"
-          href="public/files/Benjamin Mizrany_CV - Detailed_web.pdf"
-          className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 shadow-lg rounded-lg bg-ternary-light text-primary-dark focus:ring-1 focus:ring-primary-dark hover:bg-primary-dark hover:text-primary-light  hover:translate-y-0.5 hover:scale-105 duration-500"
-          aria-label="Download Resume"
-        >
-          <FiSend className="ml-0 sm:ml-1 mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiSend>
-          <span className="text-sm sm:text-lg duration-100">Download CV</span>
-        </button>
-      </div>
+      {showForm}
+      <hr className="mt-8 mb-4" />
+      {!showForm && (
+        <div className="flex items-center justify-center mb-8">
+          <button
+            onClick={setShowForm(true)}
+            className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 shadow-lg rounded-lg hover:bg-ternary-light hover:text-primary-dark focus:ring-1 focus:ring-primary-dark bg-primary-dark text-primary-light  hover:translate-y-0.5 hover:scale-105 duration-500"
+          >
+            <FiSend className="ml-0 sm:ml-1 mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100" />
+            <span>Contact me</span>
+          </button>
+        </div>
+      )}
+
       <div className="leading-loose flex  items-center justify-center">
         <form
           onSubmit={(e) => {
@@ -74,13 +78,12 @@ function ContactForm() {
           </div>
 
           <div className="mt-6">
-            <span className="font-general-medium  px-7 py-4 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500">
-              <Button
-                title="Send Message"
-                type="submit"
-                aria-label="Send Message"
-              />
-            </span>
+            <input
+              title="Send Message"
+              type="submit"
+              aria-label="Send Message"
+              value="Send"
+            />
           </div>
         </form>
       </div>
