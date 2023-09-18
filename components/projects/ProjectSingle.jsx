@@ -21,7 +21,7 @@ const ProjectSingle = (props) => {
         aria-label="Single Project"
         passHref
       >
-        <div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
+        <div className="rounded-xl shadow-lg grayscale hover:grayscale-0 hover:shadow-xl  hover:translate-y-0.5 hover:scale-105 cursor-pointer mb-10 sm:mb-0 bg-secondary-light duration-500">
           <div>
             <Image
               src={props.img}

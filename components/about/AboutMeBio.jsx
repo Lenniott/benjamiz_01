@@ -23,7 +23,7 @@ function AboutMeBio() {
             />
             <div className="pb-10">
               <h3 className="text-xl font-semibold pb-4">{bio.title}</h3>
-              <p>{bio.bio}</p>
+              <p className="font-light">{bio.bio}</p>
             </div>
           </div>
         ))}

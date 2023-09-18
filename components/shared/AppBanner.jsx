@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FiArrowDownCircle } from "react-icons/fi";
+import { FiArrowDownCircle, FiBriefcase } from "react-icons/fi";
 import useThemeSwitcher from "../../hooks/useThemeSwitcher";
 import homePageImage from "../../public/images/homePage";
 
 function AppBanner() {
-  const [activeTheme] = useThemeSwitcher();
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -23,7 +21,7 @@ function AppBanner() {
             duration: 0.9,
             delay: 0.1,
           }}
-          className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
+          className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark uppercase"
         >
           Hi👋🏽, I'm Benjamin
         </motion.h1>
@@ -50,12 +48,11 @@ function AppBanner() {
           className="flex justify-center sm:block"
         >
           <a
-            download="Benjamin Mizrany_CV - Detailed_web.pdf"
-            href="public/files/Benjamin Mizrany_CV - Detailed_web.pdf"
-            className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
+            href="../files/benjamizCVdetailed.pdf"
+            className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 shadow-lg rounded-lg bg-ternary-light text-primary-dark focus:ring-1 focus:ring-primary-dark hover:bg-primary-dark hover:text-primary-light  hover:translate-y-0.5 hover:scale-105 duration-500"
             aria-label="Download Resume"
           >
-            <FiArrowDownCircle className="ml-0 sm:ml-1 mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiArrowDownCircle>
+            <FiBriefcase className="ml-0 sm:ml-1 mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiBriefcase>
             <span className="text-sm sm:text-lg duration-100">Download CV</span>
           </a>
         </motion.div>
@@ -64,13 +61,23 @@ function AppBanner() {
         initial={{ opacity: 0, y: -180 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-        className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
+        className="relative w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0 "
       >
-        <Image
-          layout="responsive"
-          src={homePageImage.hero}
-          alt="product designer"
-        />
+        <div className=" group hover:translate-y-0.5 hover:scale-105 grayscale hover:grayscale-0  duration-500">
+          <Image
+            layout="responsive"
+            src={homePageImage.hero}
+            alt="product designer"
+          />
+          <button
+            download="Benjamin Mizrany_CV - Detailed_web.pdf"
+            href="public/files/Benjamin Mizrany_CV - Detailed_web.pdf"
+            className="absolute top-[310px] left-[170px] font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 group-hover:shadow-lg rounded-lg bg-transparent text-transparent group-hover:translate-y-0.5 group-hover:scale-105 grayscale group-hover:grayscale-0 group-hover:bg-primary-dark group-hover:text-primary-light duration-500"
+            aria-label="Download Resume"
+          >
+            About me
+          </button>
+        </div>
       </motion.div>
     </motion.section>
   );

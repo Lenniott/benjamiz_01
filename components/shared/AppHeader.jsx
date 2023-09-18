@@ -27,20 +27,38 @@ function AppHeader() {
   const NavMenuItem = (props) => {
     return (
       <>
-        <div className=" ">
-          <Link
-            onClick={toggleMenu}
-            href={props.link}
-            aria-label={props.menuItem}
-            className="block text-left text-lg text-primary-dark hover:text-secondary-dark sm:py-2 p-2 hover:bg-indigo-200 rounded-lg duration-500"
-          >
-            {props.menuItem}
-          </Link>
-        </div>
-        <hr className="border-gray-100 " />
+        <Link
+          onClick={toggleMenu}
+          href={props.link}
+          aria-label={props.label}
+          className="block text-left text-lg text-primary-dark sm:py-2 p-2 hover:bg-slate-200 rounded-lg duration-500"
+        >
+          {props.label}
+        </Link>
+        <hr className="border-ternary-light " />
       </>
     );
   };
+
+  const NavList = (props) => {
+    return (
+      <>
+        <Link
+          href={props.link}
+          className="block text-left text-lg font-medium text-primary-dark hover:underline underline-offset-4  sm:mx-4 mb-2 sm:py-2 duration-500"
+          aria-label={props.label}
+        >
+          {props.label}
+        </Link>
+      </>
+    );
+  };
+
+  const navList = [
+    ["/about", "About me"],
+    ["/projects", "Case studies"],
+    ["/cv", "Experience"],
+  ];
 
   return (
     <motion.nav
@@ -50,14 +68,14 @@ function AppHeader() {
       className="sticky top-0 z-50  w-full "
     >
       {/* Header */}
-      <div className="bg-white  z-10 w-full">
+      <div className="bg-secondary-light  z-10 w-full">
         <div className="flex max-w-screen-xl mx-auto px-6 justify-between items-center py-2">
           {/* Header menu links and small screen hamburger menu */}
           <div className="flex justify-between items-center ">
             <div>
               <Link href="/">
                 <div className="flex justify-center items-center gap-2 font-medium text-xs">
-                  <div className="grid p-6 bg-indigo-800 shadow-sm rounded-lg h-7 w-7 place-content-center">
+                  <div className="grid p-6 bg-primary-dark shadow-sm rounded-lg h-7 w-7 place-content-center">
                     <div className="flex justify-center text-primary-light">
                       Benja
                     </div>
@@ -74,7 +92,7 @@ function AppHeader() {
             <button
               onClick={toggleMenu}
               type="button"
-              className="focus:outline-none w-12 h-12 font-general-medium flex justify-center items-center text-lg shadow-sm rounded-lg bg-primary-light hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
+              className="focus:outline-none w-12 h-12 font-general-medium flex justify-center items-center text-lg shadow-md rounded-lg bg-primary-light hover:bg-primary-dark text-se hover:text-primary-light hover:translate-y-0.5 hover:scale-110 duration-500"
               aria-label="Hamburger Menu"
             >
               {showMenu ? (
@@ -87,40 +105,24 @@ function AppHeader() {
             <div
               className={
                 showMenu
-                  ? "absolute right-0 m-0 mt-2 sm:ml-4 sm:mt-3 md:flex px-5 py-3 pb-full sm: z-10 p-0 justify-between items-center shadow-lg sm:shadow-none bg-white rounded-lg w-full"
+                  ? "absolute right-0 m-0 mt-2 sm:ml-4 sm:mt-3 md:flex px-5 py-3 pb-full sm: z-10 p-0 justify-between items-center shadow-lg sm:shadow-none bg-primary-light rounded-lg w-full"
                   : "hidden"
               }
             >
-              <NavMenuItem menuItem="About me" link="/about" />
-              <hr className="border-gray-100 " />
-              <NavMenuItem menuItem="Case studies" link="/projects" />
-              <hr className="border-gray-100 " />
-              <NavMenuItem menuItem="Experience" link="/cv" />
+              {navList.map((item) => (
+                <>
+                  <NavMenuItem label={item[1]} link={item[1]} />
+                  <hr className="border-gray-100 " />
+                </>
+              ))}
             </div>
           </div>
 
           {/* Header links large screen */}
           <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-            <div
-              className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:underline underline-offset-4 hover:text-indigo-800  sm:mx-4 mb-2 sm:py-2"
-              aria-label="About Me"
-            >
-              <Link href="/about">About me</Link>
-            </div>
-
-            <div
-              className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-              aria-label="Projects"
-            >
-              <Link href="/projects">Case studies</Link>
-            </div>
-
-            <div
-              className="block text-left text-lg font-medium text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-              aria-label="CV"
-            >
-              <Link href="/cv">Experience</Link>
-            </div>
+            {navList.map((item) => (
+              <NavList label={item[1]} link={item[0]} />
+            ))}
           </div>
         </div>
         {/* Header right section buttons */}

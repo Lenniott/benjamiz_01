@@ -1,15 +1,28 @@
 import Button from "../reusable/Button";
 import FormInput from "../reusable/FormInput";
+import { FiSend, FiMenu } from "react-icons/fi";
 
 function ContactForm() {
   return (
     <div className="w-full lg:w-1/2">
-      <div className="leading-loose">
+      <hr className="m-8" />
+      <div>
+        <button
+          download="Benjamin Mizrany_CV - Detailed_web.pdf"
+          href="public/files/Benjamin Mizrany_CV - Detailed_web.pdf"
+          className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 shadow-lg rounded-lg bg-ternary-light text-primary-dark focus:ring-1 focus:ring-primary-dark hover:bg-primary-dark hover:text-primary-light  hover:translate-y-0.5 hover:scale-105 duration-500"
+          aria-label="Download Resume"
+        >
+          <FiSend className="ml-0 sm:ml-1 mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100"></FiSend>
+          <span className="text-sm sm:text-lg duration-100">Download CV</span>
+        </button>
+      </div>
+      <div className="leading-loose flex  items-center justify-center">
         <form
           onSubmit={(e) => {
             e.preventDefault();
           }}
-          className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
+          className="w-full max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
         >
           <p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
             Contact Form
