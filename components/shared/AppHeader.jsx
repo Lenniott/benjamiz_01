@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiX, FiMenu } from "react-icons/fi";
+import { v4 as uuidv4 } from "uuid";
 
 function AppHeader() {
   const [showMenu, setShowMenu] = useState(false);
@@ -55,9 +56,9 @@ function AppHeader() {
   };
 
   const navList = [
-    ["/about", "About me"],
-    ["/projects", "Case studies"],
-    ["/cv", "Experience"],
+    ["/about", "About me", uuidv4()],
+    ["/projects", "Case studies", uuidv4()],
+    ["/cv", "Experience", uuidv4()],
   ];
 
   return (
@@ -111,8 +112,8 @@ function AppHeader() {
             >
               {navList.map((item, index) => (
                 <>
-                  <NavMenuItem id={index} label={item[1]} link={item[1]} />
-                  <hr id={`hr-${index}`} className="border-gray-100 " />
+                  <NavMenuItem id={item[2]} label={item[1]} link={item[1]} />
+                  <hr id={uuidv4()} className="border-gray-100 " />
                 </>
               ))}
             </div>
@@ -121,7 +122,7 @@ function AppHeader() {
           {/* Header links large screen */}
           <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
             {navList.map((item, index) => (
-              <NavList id={index} label={item[1]} link={item[0]} />
+              <NavList id={item[2]} label={item[1]} link={item[0]} />
             ))}
           </div>
         </div>
