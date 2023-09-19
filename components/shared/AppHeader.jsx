@@ -112,7 +112,7 @@ function AppHeader() {
             >
               {navList.map((item, index) => (
                 <>
-                  <NavMenuItem id={item[2]} label={item[1]} link={item[1]} />
+                  <NavMenuItem id={item[2]} label={item[1]} link={item[0]} />
                   <hr id={uuidv4()} className="border-gray-100 " />
                 </>
               ))}
