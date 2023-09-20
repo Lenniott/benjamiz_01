@@ -112,8 +112,8 @@ function AppHeader() {
             >
               {navList.map((item, index) => (
                 <>
-                  <NavMenuItem id={item[2]} label={item[1]} link={item[0]} />
-                  <hr id={uuidv4()} className="border-gray-100 " />
+                  <NavMenuItem key={item[2]} label={item[1]} link={item[0]} />
+                  <hr key={uuidv4()} className="border-gray-100 " />
                 </>
               ))}
             </div>
@@ -122,7 +122,7 @@ function AppHeader() {
           {/* Header links large screen */}
           <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
             {navList.map((item, index) => (
-              <NavList id={item[2]} label={item[1]} link={item[0]} />
+              <NavList key={item[2]} label={item[1]} link={item[0]} />
             ))}
           </div>
         </div>
