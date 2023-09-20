@@ -83,6 +83,7 @@ function ContactForm() {
               type="submit"
               aria-label="Send Message"
               value="Send"
+              className="font-general-medium flex gap-2 justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 shadow-lg rounded-lg hover:bg-ternary-light hover:text-primary-dark focus:ring-1 focus:ring-primary-dark bg-primary-dark text-primary-light  hover:translate-y-0.5 hover:scale-105 duration-500"
             />
           </div>
         </form>

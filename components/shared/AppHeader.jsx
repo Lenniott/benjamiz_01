@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 
 function AppHeader() {
   const [showMenu, setShowMenu] = useState(false);
-  const menuRef = useRef(null);
+  const menuRef = useRef("");
 
   function toggleMenu() {
     setShowMenu(!showMenu);
