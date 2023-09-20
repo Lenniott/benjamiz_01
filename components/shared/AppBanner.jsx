@@ -35,7 +35,10 @@ function AppBanner() {
           }}
           className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
         >
-          Product designer & problem solver
+          <p className="mb-3">Product designer & problem solver</p>
+          <p className="text-sm font-light">
+            Building customer value through usable and professional software.
+          </p>
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
