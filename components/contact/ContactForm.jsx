@@ -1,10 +1,47 @@
-import Button from "../reusable/Button";
 import FormInput from "../reusable/FormInput";
 import { FiSend, FiMenu } from "react-icons/fi";
 import { useState } from "react";
 
 function ContactForm() {
   const [showForm, setShowForm] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.status === 200) {
+        alert("Email sent successfully.");
+      } else {
+        alert(`An error occurred. ${res.status}`);
+      }
+    } catch (error) {
+      console.error("There was an error sending the email", error);
+    }
+  };
+
+  function emailMe() {}
+
   return (
     <div className="w-full lg:w-1/2">
       {showForm}
@@ -23,9 +60,8 @@ function ContactForm() {
 
       <div className="leading-loose flex  items-center justify-center">
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
+          autocomplete="off"
+          onSubmit={handleSubmit}
           className="w-full max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
         >
           <p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
@@ -40,6 +76,9 @@ function ContactForm() {
             inputName="name"
             placeholderText="Your Name"
             ariaLabelName="Name"
+            autocomplete="off"
+            value={formData.name}
+            onChange={handleInputChange}
           />
           <FormInput
             inputLabel="Email"
@@ -49,6 +88,9 @@ function ContactForm() {
             inputName="email"
             placeholderText="Your email"
             ariaLabelName="Email"
+            autocomplete="off"
+            value={formData.email}
+            onChange={handleInputChange}
           />
           <FormInput
             inputLabel="Subject"
@@ -58,6 +100,9 @@ function ContactForm() {
             inputName="subject"
             placeholderText="Subject"
             ariaLabelName="Subject"
+            autocomplete="off"
+            value={formData.subject}
+            onChange={handleInputChange}
           />
 
           <div className="mt-6">
@@ -74,6 +119,9 @@ function ContactForm() {
               cols="14"
               rows="6"
               aria-label="Message"
+              autocomplete="off"
+              value={formData.message}
+              onChange={handleInputChange}
             ></textarea>
           </div>
 
@@ -88,6 +136,7 @@ function ContactForm() {
           </div>
         </form>
       </div>
+      <button label="test email" onClick={emailMe} />
     </div>
   );
 }
