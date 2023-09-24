@@ -4,7 +4,6 @@ import { useState } from "react";
 
 function ContactForm() {
   const [showForm, setShowForm] = useState(false);
-  const [modal, setModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",

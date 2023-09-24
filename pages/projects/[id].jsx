@@ -3,26 +3,39 @@ import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
 
 function ProjectSingle(props) {
-  const chip = {
-    header: "",
-  };
-
   const renderLayout = (details, index) => {
     switch (details.styleID) {
       case "ImageOnly":
         return (
-          <div className={styles.imageOnly}>
-            {/* Your ImageOnly layout JSX */}
-          </div>
+          <>
+            <div
+              key={details.id}
+              className={`flex items-center justify-center gap-8`}
+            >
+              <div className="grid gap-2 py-2">
+                <Image
+                  alt={details.alt}
+                  src={details.img}
+                  width={300}
+                  height={300}
+                  className="w-full rounded-lg"
+                />
+                <p className="text-center text-xs">{details.alt}</p>
+              </div>
+            </div>
+          </>
         );
       case "textOnly":
         return (
-          <div key={details.id} className="mb-4 mt-0">
-            <div className="p-4 rounded-lg">
-              <h2 className="w-full flex justify-start text-2xl font-semibold">
-                {details.title}
-              </h2>
-              <p className="text-ternary-dark text-left font-light  text-lg ">
+          <div key={details.id} className="py-2">
+            <div className=" rounded-lg">
+              {details.title && (
+                <h2 className="w-full flex justify-start text-2xl font-semibold pb-2">
+                  {details.title}
+                </h2>
+              )}
+
+              <p className="text-ternary-dark text-left font-light  text-lg">
                 {details.body}
               </p>
             </div>
@@ -33,23 +46,12 @@ function ProjectSingle(props) {
           <>
             <div
               key={details.id}
-              className={`grid md:flex gap-8 mb-8 mt-4 ${
+              className={`grid md:flex gap-8 ${
                 (index + 1) % 2 === 0 ? "" : "md:flex-row-reverse"
               } `}
             >
-              <div className="md:w-2/5 grid gap-2">
-                <Image
-                  alt={details.alt}
-                  src={details.img}
-                  width={300}
-                  height={300}
-                  className="w-full rounded-lg"
-                />
-                <p className="text-center text-xs">{details.alt}</p>
-              </div>
-
               <div
-                className={`flex md:my-8  ${
+                className={`flex py-2 ${
                   details.img ? "md:w-3/5" : ""
                 } flex-col justify-center items-center`}
               >
@@ -57,7 +59,19 @@ function ProjectSingle(props) {
                   {details.title}
                 </h2>
 
-                <p className="">{details.body}</p>
+                <p className="text-ternary-dark text-left font-light  text-lg">
+                  {details.body}
+                </p>
+              </div>
+              <div className="md:w-2/5 flex flex-col items-center justify-center gap-2 ">
+                <Image
+                  alt={details.alt}
+                  src={details.img}
+                  width={300}
+                  height={300}
+                  className="object-cover rounded-lg"
+                />
+                <p className="text-center text-xs">{details.alt}</p>
               </div>
             </div>
           </>
@@ -65,11 +79,11 @@ function ProjectSingle(props) {
       case "quote":
         return (
           <div key={details.id} className="mb-8 mt-4">
-            <div className="bg-indigo-100 p-4 rounded-lg">
+            <div className="bg-slate-700 p-4 rounded-lg">
               <h2 className="w-full flex justify-start text-2xl font-semibold">
                 {details.title}
               </h2>
-              <p className="italic text-ternary-dark text-left font-light  text-lg ">
+              <p className="italic text-ternary-light text-left font-light  text-lg ">
                 {details.body}
               </p>
             </div>
@@ -77,13 +91,13 @@ function ProjectSingle(props) {
         );
       case "chip":
         return (
-          <div key={details.id} className="mb-8 mt-4">
-            <div className="bg-gray-100 p-4 rounded-lg">
+          <div key={details.id} className="">
+            <div className="bg-slate-200 p-4 rounded-lg">
               <h2 className="w-full flex justify-start text-xl font-semibold text-gray-700 pb-2">
                 {details.title}
               </h2>
               <p className="italic text-ternary-dark text-left font-light  text-lg ">
-                "{details.body}"
+                {details.body}
               </p>
             </div>
           </div>
@@ -94,7 +108,7 @@ function ProjectSingle(props) {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto max-w-6xl">
       <PagesMetaHead title={props.project.title} />
 
       {/* Header */}
@@ -103,16 +117,16 @@ function ProjectSingle(props) {
           {props.project.ProjectHeader.title}
         </p>
         <div className="flex">
-          <p className="font-general-regular text-primary-dark">
+          <p className="font-light text-primary-dar">
             {props.project.ProjectHeader.description}
           </p>
         </div>
       </div>
 
       {/* Info */}
-      <div className="block sm:flex gap-0 sm:gap-10">
+      <div className="">
         {/*  Single project right section details */}
-        <div className="w-full text-left">
+        <div className="w-full text-left grid gap-4">
           <p className="text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
             {props.project.ProjectInfo.ProjectDetailsHeading}
           </p>
@@ -122,16 +136,6 @@ function ProjectSingle(props) {
         </div>
       </div>
       {/* <RelatedProjects /> */}
-      {/* <div>
-        {showModal ? (
-          <ImageModal
-            onClose={showImageModal}
-            onRequest={showImageModal}
-            image={selectedImage}
-          />
-        ) : null}
-        {showModal ? showImageModal : null}
-      </div> */}
     </div>
   );
 }

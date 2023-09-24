@@ -8,7 +8,7 @@ const DefaultLayout = ({ children }) => {
       <PagesMetaHead />
       <AppHeader />
       <div>{children}</div>
-      <ContactForm />
+      {/* <ContactForm /> */}
       <AppFooter />
     </div>
   );
