@@ -1,6 +1,6 @@
-import Skills from "./skillIcons";
 import { experienceData } from "../../data/experience";
 import { FiBriefcase, FiArrowUp } from "react-icons/fi";
+import Skills from "./skillIcons";
 
 const ExperienceTimeline = () => {
   return (
