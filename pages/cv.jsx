@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import ExperienceDetails from "../components/contact/ExperienceDetails";
-import ContactForm from "../components/contact/ContactForm";
 import PagesMetaHead from "../components/PagesMetaHead";
 
 function experience() {
