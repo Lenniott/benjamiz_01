@@ -27,6 +27,9 @@ const ExperienceTimeline = () => {
           </ul>
         </li>
       ))}
+      <li className="absolute bottom-0 -left-[16px] flex items-center justify-center w-8 h-8 bg-primary-dark rounded-full ring-8 ring-primary-light ">
+        <FiArrowUp className="text-primary-light" />
+      </li>
     </ol>
   );
 };
@@ -37,9 +40,6 @@ function Experience() {
       <h1 className="text-2xl pt-1 pb-4">Professional experience</h1>
       <div className="ml-4">
         <ExperienceTimeline />
-        <span className="absolute flex items-center justify-center w-8 h-8 bg-primary-dark rounded-full left-[65px] ring-8 ring-primary-light">
-          <FiArrowUp className="text-primary-light" />
-        </span>
       </div>
 
       <div className="mt-24">

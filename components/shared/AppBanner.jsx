@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiArrowDownCircle, FiBriefcase } from "react-icons/fi";
-import useThemeSwitcher from "../../hooks/useThemeSwitcher";
 import homePageImage from "../../public/images/homePage";
 
 function AppBanner() {
@@ -33,10 +32,21 @@ function AppBanner() {
             duration: 0.9,
             delay: 0.2,
           }}
-          className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
+          className="font-general-medium mt-2 text-lg md:text-lg lg:text-xl xl:text-xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
         >
-          Product designer & problem solver Building customer value through
-          usable and professional software.
+          Product designer
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.9,
+            delay: 0.2,
+          }}
+          className="font-light mt-0 text-md md:text-md lg:text-md xl:text-md text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
+        >
+          Creating value through simple and professional design
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -66,6 +76,8 @@ function AppBanner() {
       >
         <div className=" hover:translate-y-0.5 hover:scale-105 grayscale hover:grayscale-0  duration-500">
           <Image
+            width="300"
+            height="300"
             layout="responsive"
             src={homePageImage.hero}
             alt="Product designer"

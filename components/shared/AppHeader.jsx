@@ -56,6 +56,7 @@ function AppHeader() {
   };
 
   const navList = [
+    ["/", "Home", uuidv4()],
     ["/about", "About me", uuidv4()],
     ["/projects", "Case studies", uuidv4()],
     ["/cv", "Experience", uuidv4()],
