@@ -78,7 +78,6 @@ function AppBanner() {
           <Image
             width="300"
             height="300"
-            layout="responsive"
             src={homePageImage.hero}
             alt="Product designer"
           />
