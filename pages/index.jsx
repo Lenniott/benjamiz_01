@@ -4,7 +4,7 @@ import AppBanner from "../components/shared/AppBanner";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <PagesMetaHead title="Home" />
       <AppBanner />
       <ProjectsGrid />

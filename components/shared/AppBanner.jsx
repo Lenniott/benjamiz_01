@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FiArrowDownCircle, FiBriefcase } from "react-icons/fi";
+import {  FiBriefcase } from "react-icons/fi";
 import homePageImage from "../../public/images/homePage";
 
 function AppBanner() {
@@ -76,8 +76,6 @@ function AppBanner() {
       >
         <div className=" hover:translate-y-0.5 hover:scale-105 grayscale hover:grayscale-0  duration-500">
           <Image
-            width="300"
-            height="300"
             className="relative rounded-lg"
             src={homePageImage.hero}
             alt="Product designer"

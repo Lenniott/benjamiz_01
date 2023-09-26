@@ -20,7 +20,7 @@ a {
 
 /* Scroll to top style */
 .scrollToTop {
-  @apply bg-indigo-600;
+  @apply bg-slate-800;
   @apply text-white;
   position: fixed;
   width: 100%;
