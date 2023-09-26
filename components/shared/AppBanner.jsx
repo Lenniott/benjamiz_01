@@ -78,6 +78,7 @@ function AppBanner() {
           <Image
             width="300"
             height="300"
+            className="relative rounded-lg"
             src={homePageImage.hero}
             alt="Product designer"
           />
