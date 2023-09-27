@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
 
@@ -13,6 +14,7 @@ function ProjectSingle(props) {
               className={`flex items-center justify-center gap-8`}
             >
               <div className="grid gap-2 py-2">
+              <Link href="/project/images/[id]"  as={`/projects/images/${details.id}`} passHref>
                 <Image
                   alt={details.alt}
                   src={details.img}
@@ -21,6 +23,7 @@ function ProjectSingle(props) {
                   className="w-full rounded-lg"
                 />
                 <p className="text-center text-xs">{details.alt}</p>
+                </Link>
               </div>
             </div>
           </>

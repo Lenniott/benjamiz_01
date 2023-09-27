@@ -11,7 +11,7 @@ function ProjectsGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1  mt-6 sm:gap-5 max-w-xl">
+        <div className="grid grid-cols-1 mt-6 sm:gap-5 max-w-xl">
           {projectsData.map((project, index) => (
             <ProjectSingle key={index} {...project} />
           ))}
