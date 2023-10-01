@@ -1,9 +1,10 @@
 import Image from "next/image";
-import Link from 'next/link';
+import { useState } from "react";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
 
 function ProjectSingle(props) {
+  const [modal, setModal] = useState(false);
   const renderLayout = (details, index) => {
     switch (details.styleID) {
       case "ImageOnly":
@@ -14,16 +15,17 @@ function ProjectSingle(props) {
               className={`flex items-center justify-center gap-8`}
             >
               <div className="grid gap-2 py-2">
-              <Link href="/project/images/[id]"  as={`/projects/images/${details.id}`} passHref>
                 <Image
                   alt={details.alt}
                   src={details.img}
                   width={300}
                   height={300}
                   className="w-full rounded-lg"
+                  onClick={() => {
+                    setModal(true);
+                  }}
                 />
                 <p className="text-center text-xs">{details.alt}</p>
-                </Link>
               </div>
             </div>
           </>
@@ -110,8 +112,19 @@ function ProjectSingle(props) {
     }
   };
 
+  const Modal = (props) => {
+    return (
+      <div className="bg-black fixed top-0 left-0 w-screen h-screen z-50">
+        <div>
+          <p>test</p>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="container mx-auto max-w-6xl">
+      {modal && <Modal />}
       <PagesMetaHead title={props.project.title} />
 
       {/* Header */}

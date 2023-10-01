@@ -225,7 +225,7 @@ function skillIcons() {
           />
         </svg>
       ),
-      tooltip: "vs code",
+      tooltip: "VScode",
     },
     {
       icon: (
@@ -266,11 +266,11 @@ function skillIcons() {
   ];
 
   return (
-    <div className="flex gap-2">
+    <div className="grid grid-cols-4 xs:grid-cols-8 sm:grid-cols-10 md:flex gap-2">
       {images.map((item, index) => (
         <div key={index} className="relative group">
           <a aria-label={item.tooltip}>{item.icon}</a>
-          <span className="hidden group-hover:flex bg-slate-300 rounded-md items-center justify-center absolute mt-1 bottom-text-sm font-light transition ease-in-out duration-500 p-1 w-28">
+          <span className="z-50 hidden group-hover:flex bg-slate-300 rounded-md items-center shadow-lg justify-center absolute mt-1 text-xs font-light transition ease-in-out duration-500 p-1 px-4 ">
             {item.tooltip}
           </span>
         </div>
