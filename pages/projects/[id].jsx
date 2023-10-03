@@ -3,7 +3,7 @@ import { useState } from "react";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
 import { Modal } from "../../components/reusable";
-import image from "../../public/images/project 1/userFlow.jpg";
+
 
 function ProjectSingle(props) {
   const [modal, setModal] = useState(false);
