@@ -2,9 +2,13 @@ import Image from "next/image";
 import { useState } from "react";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
+import { Modal } from "../../components/reusable";
+import image from "../../public/images/project 1/userFlow.jpg";
 
 function ProjectSingle(props) {
   const [modal, setModal] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
+
   const renderLayout = (details, index) => {
     switch (details.styleID) {
       case "ImageOnly":
@@ -22,6 +26,12 @@ function ProjectSingle(props) {
                   height={300}
                   className="w-full rounded-lg"
                   onClick={() => {
+                    setCurrentImage({
+                      src: details.imgHi,
+                      alt: details.alt,
+                      height: 300,
+                      width: 300,
+                    }); // Set the hi-res image
                     setModal(true);
                   }}
                 />
@@ -112,19 +122,15 @@ function ProjectSingle(props) {
     }
   };
 
-  const Modal = (props) => {
-    return (
-      <div className="bg-black fixed top-0 left-0 w-screen h-screen z-50">
-        <div>
-          <p>test</p>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div className="container mx-auto max-w-6xl">
-      {modal && <Modal />}
+      <Modal
+        modal={modal}
+        image={currentImage}
+        modalClose={() => {
+          setModal(false);
+        }}
+      />
       <PagesMetaHead title={props.project.title} />
 
       {/* Header */}
