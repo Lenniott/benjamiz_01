@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FiChevronUp } from 'react-icons/fi';
 
-function useScrollToTop() {
+function useScrollToTop({className}) {
 	const [showScroll, setShowScroll] = useState(false);
 
 	useEffect(() => {
@@ -33,7 +33,7 @@ function useScrollToTop() {
 	return (
 		<>
 			<FiChevronUp
-				className="scrollToTop"
+				className={`scrollToTop`}
 				onClick={backToTop}
 				style={{
 					height: 40,

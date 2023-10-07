@@ -14,10 +14,9 @@ function PagesMetaHead({ title, keywords, description }) {
 }
 
 PagesMetaHead.defaultProps = {
-  title: "Next.js & TailwindCSS Portfolio Project",
-  keywords:
-    "product, design, agile, web, ux, user, research, prototyping, interaction, wireframing, sketching, user-centric, interface, usability, user experience, iterative, innovation, creative, problem-solving, visual design, user testing, collaboration, accessibility, information architecture, design thinking, responsive design, product development, user flow, user persona, empathy, user-centred design, design iteration, user journey, user interface (ui), human-centred design, user feedback, design strategy",
-  keywords: "Simple and multi-page next.js and react application",
+  title: "Benjamiz",
+  description: "A Product designer creating value through simple and professional design",
+  keywords: "product, design, agile, web, ux, user, research, prototyping, interaction, wireframing, sketching, user-centric, interface, usability, user experience, iterative, innovation, creative, problem-solving, visual design, user testing, collaboration, accessibility, information architecture, design thinking, responsive design, product development, user flow, user persona, empathy, user-centred design, design iteration, user journey, user interface (ui), human-centred design, user feedback, design strategy",
 };
 
 export default PagesMetaHead;

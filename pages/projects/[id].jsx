@@ -9,6 +9,18 @@ function ProjectSingle(props) {
   const [modal, setModal] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
 
+
+  const openModal = (imageDetails) => {
+    console.log("Opening modal"); // Debugging line
+    setCurrentImage(imageDetails);
+    setModal(true);
+  };
+
+  const closeModal = () => {
+    console.log("Closing modal"); // Debugging line
+    setModal(false);
+  };
+
   const renderLayout = (details, index) => {
     switch (details.styleID) {
       case "ImageOnly":
@@ -19,22 +31,38 @@ function ProjectSingle(props) {
               className={`flex items-center justify-center gap-8`}
             >
               <div className="grid gap-2 py-2">
-                <Image
-                  alt={details.alt}
-                  src={details.img}
-                  width={300}
-                  height={300}
-                  className="w-full rounded-lg"
-                  onClick={() => {
-                    setCurrentImage({
-                      src: details.imgHi,
-                      alt: details.alt,
-                      height: 300,
-                      width: 300,
-                    }); // Set the hi-res image
-                    setModal(true);
-                  }}
-                />
+              {details?.imgHi ? (
+                <button onClick={() => {
+                  openModal({
+                    src: details.imgHi,
+                    alt: details.alt,
+                    height: 3000,
+                    width: 3000,
+                  });
+                }}>
+                  <Image
+                    alt={details.alt}
+                    src={details.img}
+                    width={700}
+                    height={700}
+                    quality={75}
+                    className="w-full rounded-lg"
+                  />
+                </button>
+              ) : (
+                <span>
+                  <Image
+                    alt={details.alt}
+                    src={details.img}
+                    width={700}
+                    height={700}
+                    quality={75}
+                    className="w-full rounded-lg"
+                  />
+                </span>
+              )}
+
+
                 <p className="text-center text-xs">{details.alt}</p>
               </div>
             </div>
@@ -79,13 +107,37 @@ function ProjectSingle(props) {
                 </p>
               </div>
               <div className="md:w-2/5 flex flex-col items-center justify-center gap-2 ">
-                <Image
-                  alt={details.alt}
-                  src={details.img}
-                  width={300}
-                  height={300}
-                  className="object-cover rounded-lg"
-                />
+              {details?.imgHi ? (
+                <button onClick={() => {
+                  openModal({
+                    src: details.imgHi,
+                    alt: details.alt,
+                    height: 3000,
+                    width: 3000,
+                  });
+                }}>
+                  <Image
+                    alt={details.alt}
+                    src={details.img}
+                    width={700}
+                    height={700}
+                    quality={75}
+                    className="w-full rounded-lg"
+                  />
+                </button>
+                ) : (
+                <span>
+                  <Image
+                    alt={details.alt}
+                    src={details.img}
+                    width={700}
+                    height={700}
+                    quality={75}
+                    className="w-full rounded-lg"
+                  />
+                </span>
+                )}
+
                 <p className="text-center text-xs">{details.alt}</p>
               </div>
             </div>
@@ -127,9 +179,7 @@ function ProjectSingle(props) {
       <Modal
         modal={modal}
         image={currentImage}
-        modalClose={() => {
-          setModal(false);
-        }}
+        modalClose={closeModal}
       />
       <PagesMetaHead title={props.project.title} />
 
