@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import XMLParser from 'react-xml-parser';
+// import XMLParser from 'react-xml-parser';
 
 const MediumGrid = () => {
   const [posts, setPosts] = useState([]);
