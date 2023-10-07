@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const imageStyle = { maxWidth: "100%", height: "auto" };
-
 const ProjectSingle = (props) => {
   return (
     <motion.div
@@ -18,7 +16,7 @@ const ProjectSingle = (props) => {
       <Link
         href="/projects/[id]"
         as={"/projects/" + props.id}
-        aria-label="Single Project"
+        aria-label={props.title}
         passHref
       >
         <div className="rounded-xl shadow-lg grayscale hover:grayscale-0 hover:shadow-xl  hover:translate-y-0.5 hover:scale-105 cursor-pointer mb-10 sm:mb-0 bg-secondary-light duration-500">
@@ -26,9 +24,10 @@ const ProjectSingle = (props) => {
             <Image
               src={props.img}
               className="w-full rounded-t-xl border-none"
-              alt="Single Project"
-              width={100}
-              height={100}
+              alt={props.title}
+              width={300}
+              height={300}
+              quality={100}
             />
           </div>
           <div className="text-center px-4 py-6">

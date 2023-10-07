@@ -79,6 +79,9 @@ function AppBanner() {
             className="relative rounded-lg"
             src={homePageImage.hero}
             alt="Product designer"
+            width={700}
+            height={700}
+            quality={100}
           />
         </div>
       </motion.div>
