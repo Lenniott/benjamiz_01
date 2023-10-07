@@ -8,7 +8,7 @@ export default function Home() {
       <PagesMetaHead title="Home" />
       <AppBanner />
       <ProjectsGrid />
-      <Medium/>
+      {/* <Medium/> */}
     </div>
   );
 }
