@@ -1,14 +1,18 @@
 import PagesMetaHead from "../components/PagesMetaHead";
 import ProjectsGrid from "../components/projects/ProjectsGrid";
 import AppBanner from "../components/shared/AppBanner";
-import Medium from "../components/projects/Medium";
+import dynamic from 'next/dynamic';
+
+const DynamicMediumGrid = dynamic(() => import("../components/projects/Medium"), {
+  ssr: false,
+}); 
 export default function Home() {
   return (
     <div className="container mx-auto">
       <PagesMetaHead title="Home" />
       <AppBanner />
       <ProjectsGrid />
-      {/* <Medium/> */}
+      <DynamicMediumGrid />
     </div>
   );
 }

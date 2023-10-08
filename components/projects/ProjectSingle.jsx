@@ -19,24 +19,21 @@ const ProjectSingle = (props) => {
         aria-label={props.title}
         passHref
       >
-        <div className="rounded-xl shadow-lg grayscale hover:grayscale-0 hover:shadow-xl  hover:translate-y-0.5 hover:scale-105 cursor-pointer mb-10 sm:mb-0 bg-secondary-light duration-500">
-          <div>
+        <div className="w-fit h-full rounded-xl shadow-lg grayscale hover:grayscale-0 hover:shadow-xl  hover:translate-y-0.5 hover:scale-105 cursor-pointer mb-10 sm:mb-0 bg-secondary-light duration-500">
+          <span className='overflow-hidden w-72 h-72 flex items-center justify-center rounded-md'>
             <Image
-              src={props.img}
-              className="w-full rounded-t-xl border-none"
-              alt={props.title}
-              width={300}
-              height={300}
-              quality={100}
-            />
-          </div>
-          <div className="text-center px-4 py-6">
-            <p className="font-general-medium text-xl md:text-2xl text-ternary-dark dark:text-ternary-light mb-2">
-              {props.title}
-            </p>
-            <span className="text-lg text-ternary-dark dark:text-ternary-light">
-              {props.category}
-            </span>
+                src={props.img}
+                className="w-full rounded-t-xl border-none"
+                alt={props.title}
+                width={300}
+                height={300}
+                quality={100}
+              />
+          </span>
+          <div className="text-center px-4 py-6 w-72 h-32 flex items-center justify-center">
+            <h2 className="font-general-medium text-md md:text-lg text-ternary-dark dark:text-ternary-light mb-2 break-normal">
+            {props.title}
+            </h2>
           </div>
         </div>
       </Link>
