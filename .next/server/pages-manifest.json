@@ -1,13 +1,9 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/about": "pages/about.html",
-  "/api/hello": "pages/api/hello.js",
-  "/api/mediumFeed": "pages/api/mediumFeed.js",
-  "/cv": "pages/cv.html",
-  "/": "pages/index.html",
-  "/projects": "pages/projects.html",
   "/_error": "pages/_error.js",
-  "/projects/[id]": "pages/projects/[id].js",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js",
+  "/api/mediumFeed": "pages/api/mediumFeed.js",
+  "/": "pages/index.js",
+  "/projects": "pages/projects.js",
+  "/projects/[id]": "pages/projects/[id].js"
 }
