@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { useState } from "react";
 import { aboutMeData } from "../../data/aboutMeData";
+import { Button } from "../../components/reusable";
+import { FiBookmark, FiChevronLeft } from "react-icons/fi";
 
 function AboutMeBio() {
   const [aboutMe, setAboutMe] = useState(aboutMeData);
   return (
-    <div className="max-w-xl sm:flex sm:gap-10 mt-10 sm:mt-20">
+    <div className="max-w-6xl sm:flex sm:gap-10 mt-10 sm:mt-20">
       <div className="font-general-regular text-left">
         {aboutMe.map((bio, index) => (
           <div
@@ -28,6 +30,7 @@ function AboutMeBio() {
           </div>
         ))}
       </div>
+
     </div>
   );
 }

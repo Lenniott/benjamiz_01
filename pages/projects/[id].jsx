@@ -2,8 +2,9 @@ import Image from "next/image";
 import { useState } from "react";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
-import { Modal } from "../../components/reusable";
-
+import { Modal, Button } from "../../components/reusable";
+import MoreLinks from "../../components/projects/MoreLinks";
+import {  FiChevronLeft } from "react-icons/fi";
 
 function ProjectSingle(props) {
   const [modal, setModal] = useState(false);
@@ -207,7 +208,19 @@ function ProjectSingle(props) {
           })}
         </div>
       </div>
-      {/* <RelatedProjects /> */}
+      
+      <div className="flex flex-col items-center justify-center py-5 sm:py-10 mt-5 sm:mt-10">
+        <div className="text-center">
+          <h1 className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+            Extneral links
+          </h1>
+        </div>  
+          <div className="grid grid-flow-col col-auto mt-6 gap-8 w-full">
+            {props.project.links.map((link, index) => (
+              <MoreLinks key={index} {...link} />
+            ))}
+          </div>
+      </div>
     </div>
   );
 }

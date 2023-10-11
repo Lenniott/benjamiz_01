@@ -11,7 +11,7 @@ function ProjectsGrid() {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 mt-6 sm:gap-5 max-w-xl">
+        <div className="grid grid-flow-col auto-cols-max mt-6 gap-8 max-w-6xl">
           {projectsData.map((project, index) => (
             <ProjectSingle key={index} {...project} />
           ))}

@@ -4,12 +4,12 @@ import projectOneImages from "../public/images/";
 export const projectsData = [
   {
     id: 1,
-    title: "The Paradox of Knowledge Handoffs",
-    url: "the-paradox-of-knowledge-handoffs",
-    category: "Working principles",
+    title: "Knowledge Handoffs",
+    url: "knowledge-handoffs",
+    category: "Working in agile teams",
     img: projectOneImages.thumbnail,
     ProjectHeader: {
-      title: "The Paradox of Knowledge Handoffs",
+      title: "Knowledge Handoffs",
       publishDate: "Jul 2023",
       description:
         "This case study discusses my experience at Insendi, focusing on the challenges of knowledge handover and the importance of collective learning for effective product development.",
@@ -181,5 +181,26 @@ export const projectsData = [
         },
       ],
     },
+    links: [
+      {
+        id: uuidv4(),
+        title: "Course content building",
+        link: "https://deadpan-mayflower-813.notion.site/Platform-Insights-Content-Building-e68d0f7eec854fb8b7e3b15ebdfdc979",
+        description: "Learn more about the course content building process",
+      },
+      {
+        id: uuidv4(),
+        title: "Pain points of course builders",
+        link: "https://deadpan-mayflower-813.notion.site/KNOWN-PAIN-POINTS-NEEDS-e9a0408b330b49dd9142765de4d7ffa5",
+        description: "Learn more about the pain points of online course builders",
+      },      
+      {
+        id: uuidv4(),
+        title: "Learning designer archetype",
+        link: "https://deadpan-mayflower-813.notion.site/Learning-Design-Archetype-567616cceea94e2ba885b5301b1e0c88",
+        description: "Learn more about who learning designers are",
+      },
+
+    ],
   },
 ];
