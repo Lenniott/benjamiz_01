@@ -2,9 +2,8 @@ import Image from "next/image";
 import { useState } from "react";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
-import { Modal, Button } from "../../components/reusable";
+import { Modal } from "../../components/reusable";
 import MoreLinks from "../../components/projects/MoreLinks";
-import {  FiChevronLeft } from "react-icons/fi";
 
 function ProjectSingle(props) {
   const [modal, setModal] = useState(false);
@@ -221,6 +220,7 @@ function ProjectSingle(props) {
             ))}
           </div>
       </div>
+
     </div>
   );
 }

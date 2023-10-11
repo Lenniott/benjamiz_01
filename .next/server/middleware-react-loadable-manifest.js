@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"index.jsx -> ../components/projects/Medium":{"id":1656,"files":["static/chunks/656.b393ad930f0c831c.js"]},"projects/index.jsx -> ../../components/projects/Medium":{"id":1656,"files":["static/chunks/656.b393ad930f0c831c.js"]}}';

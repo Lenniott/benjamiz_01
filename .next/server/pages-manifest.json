@@ -1,8 +1,13 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/about": "pages/about.html",
+  "/api/hello": "pages/api/hello.js",
+  "/api/mediumFeed": "pages/api/mediumFeed.js",
+  "/cv": "pages/cv.html",
+  "/": "pages/index.html",
+  "/projects": "pages/projects.html",
+  "/_error": "pages/_error.js",
   "/projects/[id]": "pages/projects/[id].js",
-  "/about": "pages/about.js",
-  "/projects": "pages/projects.js"
+  "/404": "pages/404.html"
 }
