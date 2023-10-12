@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+selector {
+  print-color-adjust: exactnpm run build; /* or exact */
+  -webkit-print-color-adjust: exact;
+}
+
+
 html,
 body {
   padding: 0;
