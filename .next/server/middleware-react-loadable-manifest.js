@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"index.jsx -> ../components/projects/Medium\":{\"id\":\"index.jsx -> ../components/projects/Medium\",\"files\":[\"static/chunks/components_projects_Medium_jsx.js\"]}}"
