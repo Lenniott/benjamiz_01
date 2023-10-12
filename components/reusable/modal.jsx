@@ -1,6 +1,6 @@
 import Image from "next/image"; // Make sure to import Image from 'next/image'
 import { FiXCircle, FiZoomIn, FiZoomOut ,FiChevronDown ,FiChevronUp} from "react-icons/fi";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import {Button} from "../../components/reusable";
 

@@ -11,13 +11,11 @@ function ProjectSingle(props) {
 
 
   const openModal = (imageDetails) => {
-    console.log("Opening modal"); // Debugging line
     setCurrentImage(imageDetails);
     setModal(true);
   };
 
   const closeModal = () => {
-    console.log("Closing modal"); // Debugging line
     setModal(false);
   };
 
