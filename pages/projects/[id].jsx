@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import PagesMetaHead from "../../components/PagesMetaHead";
 import { projectsData } from "../../data/projectsData";
-import { Modal } from "../../components/reusable";
+// import { Modal } from "../../components/reusable";
 import MoreLinks from "../../components/projects/MoreLinks";
 
 function ProjectSingle(props) {
@@ -174,11 +174,11 @@ function ProjectSingle(props) {
 
   return (
     <div className="container mx-auto max-w-6xl">
-      <Modal
+      {/* <Modal
         modal={modal}
         image={currentImage}
         modalClose={closeModal}
-      />
+      /> */}
       <PagesMetaHead title={props.project.title} />
 
       {/* Header */}
